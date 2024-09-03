@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #470904;
+    color: #ffffff
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #580a05;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.5s ease;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: azure;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #470904;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: -100px 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+
+    .about {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 800px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content {
+        order: 2;
+    }
+
+    .home-img img {
+        width: 90vw;
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+
+    .about-img img {
+        width: 65vw;
+        margin-top: 4rem;
+    }
+
+}
+
+@media (max-width: 617px) {
+    .home-img img {
+        width: 80vw;
+        margin-top: 4rem;
+    }
+
+    .about-img img {
+        width: 100vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+
+}
+
+.home {
+    height: 100vh;
+    background: url('https://r4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-01b69d213afe95f35634472bcdf74a70.jpg?timestamp=1725291041556') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 2 10%;
+    border: 2px solid #ffffff;
+    transition: 3s;
+}
+
+.home-content {
+    max-width: 599px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #7f1109;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    width: 345px;
+    height: 52px;
+    background-color: transparent;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #ad870b;
+    border: 2px solid #ad870b;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .8s;
+}
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #ad870b;
+}
+
+.btn-box a:nth-child(1):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(1):before {
+    color: #ad870b;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ad870b;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ad870b;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ad870b;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: black
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ad870b;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* Additional CV-like styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 15px #530202;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #530202;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #530202;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    color: #ddd;
+    margin-left: 15px;
+    justify-items: left;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #530202;
+}
+
+.section ul li span {
+    font-weight: bold;
+    color: #530202;
+}
+
+.experience ul li {
+    margin-bottom: 20px;
+}
+
+.experience ul li span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.experience ul li ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.contact {
+    text-align: left;
+}
+
+.contact ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-sci a {
+    color: #530202;
+    font-size: 40px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    height: 50px;
+}
+
+.contact-sci a:hover {
+    color: #ffffff;
+}
+
+
+/*keyframe*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

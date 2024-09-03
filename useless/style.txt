@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #470904;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    background-color: #580a05;
+    padding: 20px 10%;
+    display: flex;
+    transition: top 0.5s ease;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: azure;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #470904;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #470904;
+}
+
+.home {
+    flex-grow: 1;
+    height: 100vh;
+    background: url('https://r4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-01b69d213afe95f35634472bcdf74a70.jpg?timestamp=1725291041556') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    border: 2px solid #000000;
+    transition: 3s;
+}
+
+.home-content {
+    max-width: 599px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    width: 345px;
+    height: 52px;
+    background-color: transparent;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: 0;
+    align-items: 0;
+    width: 150px;
+    height: 100%;
+    background: #ad870b;
+    border: 2px solid #ad870b;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .8s;
+}
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #ad870b;
+}
+
+.btn-box a:nth-child(1):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(1):before {
+    color: #ad870b;
+}
+
+.btn-box a::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0%;
+    background-color: #ad870b;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    bottom: 5px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-sci a {
+    bottom: 5px;
+    display: inline-flex;
+    width: 40px;
+    left: 20px;
+    height: 5px;
+    background: transparent;
+    border: 2px solid #ad870b;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ad870b;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ad870b;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+
+/* Keyframes */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

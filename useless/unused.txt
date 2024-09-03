@@ -1,0 +1,15 @@
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #ad870b;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: #470904;
+    opacity: .8;
+}
